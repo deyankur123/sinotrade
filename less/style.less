@@ -39,10 +39,12 @@ body {
     }
   }
 }
+
 .menu {
   display: flex;
+
   @media (max-width:920px) {
-  display: none !important;
+    display: none !important;
   }
 }
 
@@ -67,6 +69,7 @@ body {
     position: absolute;
     z-index: 6;
     transform: translateY(-40%) translateX(-14%);
+
     @media screen and (max-width:610px) {
       transform: translateY(-40%) translateX(-100%);
     }
@@ -133,7 +136,7 @@ body {
     width: 576px;
     height: 478px;
     z-index: -2;
-    opacity:0;
+    opacity: 0;
     right: 0px;
     top: 0px;
     border-radius: 62% 28% 69% 81%;
@@ -166,7 +169,8 @@ body {
     opacity: 1;
     transition: all 0.8s ease-in-out;
   }
-  svg{
+
+  svg {
     height: 20px;
     width: 20px;
     color: rgb(255, 254, 254);
@@ -187,9 +191,11 @@ body {
     top: 50%;
     right: 60px;
     transform: translate(0%, -50%);
-@media screen and (max-width:990px){
-  display: none;
-}
+
+    @media screen and (max-width:990px) {
+      display: none;
+    }
+
     a {
       text-decoration: none;
       color: white;
@@ -223,27 +229,36 @@ body {
         .light-bold-heading {
           font-size: 4rem;
           font-weight: 300;
+          @media screen and (max-width:660px){
+            font-size: 2rem;
+          }
         }
 
         .heavy-bold-heading {
           font-size: 4rem;
           font-weight: bolder;
-          transition: all 0.3s;
-        }
-        .button-container{
-          cursor: pointer;
-          &:hover .strate-line {
-            width: 60px;
-            transition: all 0.3s;
+          transition: all 0.3s ease-in-out;
+          @media screen and (max-width:660px){
+            font-size: 3.5rem;
           }
+        }
+
+        .button-container {
+          cursor: pointer;
+
+          &:hover .strate-line {
+            width: 70px;
+            transition: all 0.3s ease-in-out;
+          }
+
           .strate-line {
             width: 50px;
             height: 1px;
             background-color: aliceblue;
-            
+            transition: all 0.3s ease-in-out;
           }
         }
-      
+
 
       }
     }
@@ -279,7 +294,13 @@ body {
       background-color: black;
       font-size: 0.875rem;
       font-weight: 600;
+      color: white;
 
+      &:hover {
+        background-color: rgb(89, 89, 89);
+        color: rgb(255, 250, 250);
+        transition: 0.6 all ease-in-out;
+      }
 
       &::after {
         content: "";
@@ -411,6 +432,7 @@ body {
   h1 {
     font-weight: 600;
     font-size: 2.9rem;
+
     @media screen and (max-width:990px) {
       font-size: 1.9rem;
     }
@@ -420,14 +442,16 @@ body {
     width: 120px;
     height: 2px;
     background-color: #4a4a4a;
-    margin-bottom:3rem;
+    margin-bottom: 3rem;
     opacity: 1;
   }
-.category-card{
-  @media screen and (max-width:990px) {
-    margin-bottom: 20px;
+
+  .category-card {
+    @media screen and (max-width:990px) {
+      margin-bottom: 20px;
+    }
   }
-}
+
   .button {
     font-size: 0.890rem;
     text-align: center;
@@ -471,6 +495,7 @@ body {
     position: relative;
     font-size: 2.9rem;
     font-weight: 600;
+
     @media screen and (max-width:990px) {
       font-size: 1.9rem;
     }
@@ -485,29 +510,40 @@ body {
     opacity: 1;
   }
 
+  .best-tilies-card-container {
+padding-right:3rem ;
+@media screen and (max-width:610px) {
+  padding:0px 3rem;
+}
+  }
 
   .best-tilies-card {
     width: 45%;
     margin: 15px 0px 0px 12px;
     overflow: hidden;
-    @media screen  and (max-width:990px)  {
-      width:47%;
+
+    @media screen and (max-width:990px) {
+      width: 47%;
       margin: 44px 0px 0px 12px;
     }
-    @media screen  and (max-width:610px)  {
-      width:100%;
+
+    @media screen and (max-width:610px) {
+      width: 100%;
     }
+
     .img-flu {
       width: 100%;
       height: calc(17vw - 1px);
       transition: all 2s ease-in-out;
-      @media screen  and (max-width:610px)  {
-        height:350px;
+
+      @media screen and (max-width:610px) {
+        height: 350px;
       }
-      @media screen  and (max-width:990px)  {
-        height:350px;
+
+      @media screen and (max-width:990px) {
+        height: 350px;
       }
-     
+
       &:hover {
         transform: scale(1.06);
       }
@@ -573,6 +609,7 @@ body {
   h1 {
     font-size: 2.9rem;
     font-weight: 600;
+
     @media screen and (max-width:990px) {
       font-size: 1.9rem;
     }
@@ -592,13 +629,15 @@ body {
     color: rgb(255, 255, 255);
     border: none !important;
   }
-.tab-buttons-group{
-  @media screen and (max-width:610px) {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+
+  .tab-buttons-group {
+    @media screen and (max-width:610px) {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
   }
-}
+
   .tab-button {
     font-size: 0.990rem;
     margin: 0px 10px;
@@ -622,33 +661,74 @@ body {
         flex-basis: 24%;
         padding: 0 4px;
         transition: 1s all;
+
         @media screen and (max-width:990px) {
-          
-            -ms-flex: 50%;
-            flex: 50%;
-            max-width: 50%;
-          
+
+          -ms-flex: 50%;
+          flex: 50%;
+          max-width: 50%;
+
         }
-        
+
         /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
-          
-            -ms-flex: 100%;
-            flex: 100%;
-            max-width: 100%;
-          
+          -ms-flex: 100%;
+          flex: 100%;
+          max-width: 100%;
+
         }
-        img {
+
+        .image-holder {
+          width: 100%;
+          height: auto;
+          position: relative;
           margin-top: 18px;
           vertical-align: middle;
-          width: 100%;
+          overflow: hidden;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 20%;
+            height: 200%;
+            opacity: 0;
+            transform: rotate(30deg);
+
+            background: rgba(255, 255, 255, 0.13);
+            background: linear-gradient(to right,
+                rgba(255, 255, 255, 0.13) 0%,
+                rgba(255, 255, 255, 0.13) 77%,
+                rgba(255, 255, 255, 0.5) 92%,
+                rgba(255, 255, 255, 0.0) 100%);
+          }
+
+          &:hover:after {
+            opacity: 1;
+            left: 150%;
+            transition-property: left, top, opacity;
+            transition-duration: 0.7s, 0.7s, 0.15s;
+            transition-timing-function: ease;
+          }
+
         }
+
+
       }
 
+
+
+      img {
+
+        width: 100%;
+      }
     }
 
   }
+
 }
+
 
 /*********************************************************************************/
 /* brand section style                               */
@@ -684,6 +764,7 @@ body {
   h1 {
     margin-bottom: 25px;
     font-size: 2.9rem;
+
     @media screen and (max-width:990px) {
       font-size: 1.9rem;
     }
@@ -713,10 +794,12 @@ body {
 
   .readmore-button {
     cursor: pointer;
+
     &:hover .strate-line {
       width: 60px;
       transition: all 0.3s;
     }
+
     .strate-line {
       width: 50px;
       height: 2px;
@@ -749,7 +832,7 @@ footer {
 
   ul {
     li {
-      line-height:28px;
+      line-height: 28px;
     }
   }
 
@@ -774,9 +857,8 @@ footer {
     border: none;
     font-size: 1.2rem;
     color: rgb(255, 0, 0) !important;
-    top: 50%;
     right: 14px;
-    transform: translateY(-50%);
+    transform: translateY(14%);
     background-color: #fff;
     border-radius: 50%;
     width: 37px;

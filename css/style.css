@@ -217,24 +217,36 @@ body {
   font-size: 4rem;
   font-weight: 300;
 }
+@media screen and (max-width: 660px) {
+  .ban #banner-container .banner .text-container .light-bold-heading {
+    font-size: 2rem;
+  }
+}
 .ban #banner-container .banner .text-container .heavy-bold-heading {
   font-size: 4rem;
   font-weight: bolder;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 660px) {
+  .ban #banner-container .banner .text-container .heavy-bold-heading {
+    font-size: 3.5rem;
+  }
 }
 .ban #banner-container .banner .text-container .button-container {
   cursor: pointer;
 }
 .ban #banner-container .banner .text-container .button-container:hover .strate-line {
-  width: 60px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  width: 70px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .ban #banner-container .banner .text-container .button-container .strate-line {
   width: 50px;
   height: 1px;
   background-color: aliceblue;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .ban #banner-container .banner-1 {
   background-image: url('https://www.nywindowfilm.com/wp-content/uploads/2020/07/house.jpg');
@@ -256,6 +268,13 @@ body {
   background-color: black;
   font-size: 0.875rem;
   font-weight: 600;
+  color: white;
+}
+#our-story .sectionHeading__button .button:hover {
+  background-color: #595959;
+  color: #fffafa;
+  -webkit-transition: 0.6 all ease-in-out;
+  transition: 0.6 all ease-in-out;
 }
 #our-story .sectionHeading__button .button::after {
   content: "";
@@ -448,6 +467,14 @@ body {
   background-color: #4a4a4a;
   opacity: 1;
 }
+#best-tiles-container .best-tilies-card-container {
+  padding-right: 3rem ;
+}
+@media screen and (max-width: 610px) {
+  #best-tiles-container .best-tilies-card-container {
+    padding: 0px 3rem;
+  }
+}
 #best-tiles-container .best-tilies-card {
   width: 45%;
   margin: 15px 0px 0px 12px;
@@ -609,9 +636,39 @@ body {
     max-width: 100%;
   }
 }
-#our-category-2 .tab-container .masonry-gallery .custom-column img {
+#our-category-2 .tab-container .masonry-gallery .custom-column .image-holder {
+  width: 100%;
+  height: auto;
+  position: relative;
   margin-top: 18px;
   vertical-align: middle;
+  overflow: hidden;
+}
+#our-category-2 .tab-container .masonry-gallery .custom-column .image-holder::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  opacity: 0;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  background: rgba(255, 255, 255, 0.13);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.13)), color-stop(77%, rgba(255, 255, 255, 0.13)), color-stop(92%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0) 100%);
+}
+#our-category-2 .tab-container .masonry-gallery .custom-column .image-holder:hover:after {
+  opacity: 1;
+  left: 150%;
+  -webkit-transition-property: left, top, opacity;
+  transition-property: left, top, opacity;
+  -webkit-transition-duration: 0.7s, 0.7s, 0.15s;
+          transition-duration: 0.7s, 0.7s, 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+#our-category-2 .tab-container .masonry-gallery img {
   width: 100%;
 }
 /*********************************************************************************/
@@ -745,10 +802,9 @@ footer button {
   border: none;
   font-size: 1.2rem;
   color: #ff0000 !important;
-  top: 50%;
   right: 14px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(14%);
+          transform: translateY(14%);
   background-color: #fff;
   border-radius: 50%;
   width: 37px;
