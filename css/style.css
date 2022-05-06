@@ -64,7 +64,7 @@ body {
   -webkit-transform: translateY(-40%) translateX(-14%);
           transform: translateY(-40%) translateX(-14%);
 }
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 810px) {
   .side-menu .icon {
     -webkit-transform: translateY(-40%) translateX(-100%);
             transform: translateY(-40%) translateX(-100%);
@@ -470,7 +470,7 @@ body {
 #best-tiles-container .best-tilies-card-container {
   padding-right: 3rem ;
 }
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 780px) {
   #best-tiles-container .best-tilies-card-container {
     padding: 0px 3rem;
   }
@@ -726,7 +726,7 @@ body {
   cursor: pointer;
 }
 #blog-post .readmore-button:hover .strate-line {
-  width: 60px;
+  width: 70px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
